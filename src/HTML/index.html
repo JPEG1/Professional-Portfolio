@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Oosterbaan's Professional Portfolio</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/hamburger-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lato:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="name">
+                <h2>Hello, my name is</h2>
+                <h1>Jeremy Oosterbaan</h1>
+            </div>
+
+            <figure>
+                <img src="../Resources/headshot1.png" alt="Jeremy Oosterbaan">
+                <figcaption>An, admittedly dated, portrait of myself.</figcaption>
+            </figure>
+        </header>
+
+        <!-- The navigation panel is a slide-out hamburger menu. -->
+        <nav>
+            <div id="menuToggle">
+                <!--
+                In HTMl, a checkbox has a property :checked which we want to have access to.
+                By exposing this property, we can use it, acting like a button click event handler.
+                -->
+                <input type="checkbox" />
+                
+                <!-- These spans are the columns of the hamburger menu. Each span is one of the horizontal bars. -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li><a href="../HTML/index.html">Home</a></li>
+                    <li><a href="../HTML/professional_experience.html">Professional Experience</a></li>
+                    <li><a href="../HTML/design_and_development.html">Design & Development</a></li>
+                    <li><a href="../HTML/aspirations.html">Aspirations</a></li>
+                    <li><a href="../HTML/side_projects.html">Fun Side Projects</a></li>
+                    <li><a href="../HTML/about_me.html">About Me</a></li>
+                    <li><a href="https://www.linkedin.com/in/jeremy-oosterbaan-714177206/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/JPEG1" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <h2>Overview</h2>
+            <p>I'm a young software developer with a growing passion for all things tech. Looking to expand my knowledge specifically in the world of cloud computing: IaaS, PaaS, CaaS, & SaaS solutions. I'm <strong>actively looking for a job in the north-Dallas, TX area</strong>, preferably in the realm of cloud computing.</p>
+            <p>Please, view my resume below and use the hamburger menu on the left to explore some of my work!</p>
+            
+            <h2>Resume</h2>
+            <span id="resume">
+                <embed src="../Resources/JeremyOosterbaan_Resume.pdf" type="application/pdf">
+            </span>
+            
+            <p><strong>Disclaimer:</strong> <em>I am most certainly not a front-end developer. Thus, this portfolio is a simple, static website which I threw together within a weekend to present my work in other, non-front-end focused domains.</em></p>
+        </main>
+
+        <footer>
+            <a href="references.html">
+                <i class="fa-regular fa-copyright"></i>
+            </a>
+            <a href="mailto: jmooster4@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jeremy-oosterbaan-714177206/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JPEG1" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>

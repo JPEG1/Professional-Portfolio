@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JO's Portfolio | Side Projects</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/hamburger-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lato:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h2>Side Projects</h2>
+        </header>
+
+        <!-- The navigation panel is a slide-out hamburger menu. -->
+        <nav>
+            <div id="menuToggle">
+                <!--
+                In HTMl, a checkbox has a property :checked which we want to have access to.
+                By exposing this property, we can use it, acting like a button click event handler.
+                -->
+                <input type="checkbox" />
+                
+                <!-- These spans are the columns of the hamburger menu. Each span is one of the horizontal bars. -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li><a href="../HTML/index.html">Home</a></li>
+                    <li><a href="../HTML/professional_experience.html">Professional Experience</a></li>
+                    <li><a href="../HTML/design_and_development.html">Design & Development</a></li>
+                    <li><a href="../HTML/aspirations.html">Aspirations</a></li>
+                    <li><a href="../HTML/side_projects.html">Fun Side Projects</a></li>
+                    <li><a href="../HTML/about_me.html">About Me</a></li>
+                    <li><a href="https://www.linkedin.com/in/jeremy-oosterbaan-714177206/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/JPEG1" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <h2>Fun Hobby Projects</h2>
+            <p>I've not pursued many hobby projects, mainly due to my school/work schedule being so full for the past 5 years. Hoping to tackle more after I graduate. Nonetheless, there are 2 notable projects which I began:</p>
+
+            <ul>
+                <li><strong>RallyCats Spelling Error Automated Response Python Script</strong>
+                    <ul>
+                        <li>At UC, I was part of an athletics club called RallyCats which maintained a points system for ranking member involvement. The leading point earners at the end of each semester won some fancy prizes like jerseys, basketballs, etc. One of the easiest ways to earn points was by finding the spelling error in the club's weekly newletter emails. The first member to locate the spelling error & return an email to the club with the error indicated would receive 5 free points.</li>
+                        <li>Well, after being beaten one week—when I'd returned an email within 2 minutes—I decided to take a true Software Developer's approach and built an automated email parsing & returning script in Python. Essentially, upon receiving an email from the club, my script would automatically parse & locate the spelling error, create a new email & populate it with the located spelling error, and then send it off to the club. This entire process took a matter of seconds, rending my solution far more effective than that of my fellow members. I had to do a bunch of tuning on the spelling error algorithm to ignore names, and supplied it a list of UC-related terms & phrases which were also to be ignored.</li>
+                        <li>Unfortunately, the script only got to see ~8 weeks of use before my email got blacklisted as a possible bot (from the club's email, NOT the university's). I began the process of porting the project from my university MS Outlook account to my personal Gmail, but never finished the port as school picked up pace.</li>
+                    </ul>
+                </li>
+                <li><strong>Instagram Comment Bot for Entering Lightsaber Giveaways</strong>
+                    <ul>
+                        <li>This project was even less complete than the RallyCats email script, but also completed in Python. In early 2024, I was interested in winning a ~$500 lightsaber giveaway from a popular lightsaber manufacturer on Instagram. Each comment—tagging 3 new people—would earn you 1 entry into the giveaway. My plan was to create a simple Python script that went through the account's list of followers, taking 3 at a time and commenting them on the post. It would continue running until the account's entire list of followers (~20k, or ~6500 entries) had been traversed.</li>
+                        <li>I did some brief research & planning for the project, found a couple useful Python modules to enable communication with Instagram's API's, and even wrote a simple script to run everything. However, unable to find a clear line as to what rate I could run the script at before getting banned for spam, I ultimately left the project unfinished. I may yet deploy this project in the future—perhaps with a secondary Instagram account rather than my personal—as the company has continued running monthly giveaways ever since.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Due to the rather informal & incomplete nature of these projects, I never threw polished code up on GitHub (also, for the RallyCats project, I rather simply hard-coded my credentials into a text file). However, code can be viewed upon request as I've still got the projects saved.</p>
+        </main>
+
+        <footer>
+            <a href="references.html">
+                <i class="fa-regular fa-copyright"></i>
+            </a>
+            <a href="mailto: jmooster4@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jeremy-oosterbaan-714177206/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JPEG1" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>

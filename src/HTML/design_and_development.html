@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JO's Portfolio | Design & Development</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/hamburger-menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lato:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h2>Design & Development</h2>
+        </header>
+
+        <!-- The navigation panel is a slide-out hamburger menu. -->
+        <nav>
+            <div id="menuToggle">
+                <!--
+                In HTMl, a checkbox has a property :checked which we want to have access to.
+                By exposing this property, we can use it, acting like a button click event handler.
+                -->
+                <input type="checkbox" />
+                
+                <!-- These spans are the columns of the hamburger menu. Each span is one of the horizontal bars. -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li><a href="../HTML/index.html">Home</a></li>
+                    <li><a href="../HTML/professional_experience.html">Professional Experience</a></li>
+                    <li><a href="../HTML/design_and_development.html">Design & Development</a></li>
+                    <li><a href="../HTML/aspirations.html">Aspirations</a></li>
+                    <li><a href="../HTML/side_projects.html">Fun Side Projects</a></li>
+                    <li><a href="../HTML/about_me.html">About Me</a></li>
+                    <li><a href="https://www.linkedin.com/in/jeremy-oosterbaan-714177206/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/JPEG1" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <h2>Templated Android App Architecture</h2>
+            <h4>Some Background Knowledge</h4>
+            <p>In order to fully understand the motivation behind this project, I need to briefly explain how the College of Engineering & Applied Science (CEAS) at the University of Cincinnati is structured. At UC, <em>all</em> CEAS students are enrolled in a 5-year, year-round program in which we completed <em>co-op semesters</em>. This results in 5 paid internships before graduation. The culmination of this program involves a year-long project called Capstone (or Senior Design). This project may be completed outside of school/work, or with an employer. Luckily for me, my employer at the time (PE), was very interested in overhauling our mobile app development process.</p>
+            
+            <h4>Capstone GitHub Repository</h4>
+            <p><a href="https://github.com/JPEG1/Senior-Design" target="_blank">Here is the GitHub repository</a> where I stored documentation for the Templated Android App Architecture, my Capstone project. Unfortunately, source code is owned by Performance Electronics, Ltd. and thus, cannot be stored directly on my personal GitHub. The documentation/information present was all agreed upon when outlining the requirements for my Capstone project.</p>
+
+            <h4>Capstone Overview</h4>
+            <p>As I began my senior year at UC, my focus at work shifted almost wholly towards this project which would serve as my Capstone. The project itself was a <em>Templated Android App Architecture</em> whose sole purpose was to decrease development time & effort by as much as 80% when beginning new projects. It would also lay the foundation for <em>all</em> future Android apps being developed at PE.</p>
+            <h4>What Is It?</h4>
+            <p>The architecture itself is comprised of a couple key modules, following a <a href="https://cloud.google.com/learn/what-is-microservices-architecture?hl=en" target="_blank">Microservices Architecture</a>, & whom communicate with eachother following a <a href="https://cloud.google.com/pubsub/docs/overview" target="_blank">Pub/Sub</a>-like communication protocol. The various PE libaries are all imported via the <a href="https://www.atlassian.com/git/tutorials/git-submodule" target="_blank">Git Submodule</a> mechanism.</p>
+            <ul>
+                <li>Template (Skeleton) App
+                    <ul>
+                        <li>A <em>wireframe</em> or <em>empty shell</em> of a finished Android app. It contains the necessary test frameworks, library references, documentation, & default screens/views for all projects. To begin a new project, implementation apps are forked off of this repository.</li>
+                    </ul>
+                </li>
+                <li>Bluetooth Library
+                    <ul>
+                        <li>All of PE's Android bluetooth functionality belongs in this library.</li>
+                    </ul>
+                </li>
+                <li>Pub Sub Library
+                    <ul>
+                        <li>As briefly mentioned above, communication between various libraries is done so via a custom Pub/Sub. I wrote a Kotlin library which can be implemented on Android, or run on any desktop environment that can run Kotlin (for testing/validation purposes).</li>
+                    </ul>
+                </li>
+                <li>State Library
+                    <ul>
+                        <li>This is a central datastore for globally-accessible, runtime values & other constants used throughout.</li>
+                    </ul>
+                </li>
+                <li>Utility Library
+                    <ul>
+                        <li>Various utility functions, some for Android, some mathematical operations, etc. live here.</li>
+                    </ul>
+                </li>
+                <li>Widgets Library
+                    <ul>
+                        <li>This is where <em>most</em> of our UI code lives. In order to best implement this architecture, I created a library of widgets—along with a 150+ page UI specification document outlining <strong>all</strong> of their attributes with screenshot examples—for use throughout. The idea is similar to that of a <em>drag & drop pattern</em>, where the developer simply <em>drops in</em> whatever widgets they'd like to use, populating the app with consistent, modular code.</li>
+                        <!-- TODO: Can we get the UI spec doc added to the Capstone repository? Then I could link it here... -->
+                    </ul>
+                </li>
+                <li>REST Library
+                    <ul>
+                        <li>Functionality tied to communicating with PE's REST API's & cloud systems lives here.</li>
+                    </ul>
+                </li>
+                <li>DFU Library
+                    <ul>
+                        <li>The Device Firmware Update (DFU) process is managed in this library. Documentation on this process can be seen further down on this page.</li>
+                    </ul>
+                </li>
+                <li>Implementation App(s)
+                    <ul>
+                        <li>Any apps that are built off of the template, with their own custom config, theming, etc. added after forking the repo. Project-specific code lives in this repository & it serves as the central repo for each subsequent project.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Architecture Diagram</h4>
+            <span class="generic_figure">
+                <figure>
+                    <img src="../Resources/PE_Mobile_App_Architecture_R3.png" alt="PE Mobile App Architecture Rev 3">
+                </figure>
+            </span>
+
+            <h2>Device Firmware Update (DFU) Process</h2>
+            <h4>DFU Overview</h4>
+            <p><em>All</em> of our modules at PE communicated over the <a href="https://en.wikipedia.org/wiki/CAN_bus" target="_blank">Controller Area Network (CAN) bus</a>. Consequently, we could perform DFU's over CAN, but we needed a consistent, validated process that could be easily <em>dropped</em> into various projects. Back in early 2022, a coworker & I set out to design & implement such a process. There were four main physical components or sequences to the DFU process that needed to be executed. These processes were implemented as a set of nested state machines:</p>
+            <ol>
+                <li>Non-Volative Memory (NVM) Config Write
+                    <ul>
+                        <li>A set of config values would be written to NVM within the physical modules.</li>
+                    </ul>
+                </li>
+                <li>Central Processor (CP) Firmware Update
+                    <ul>
+                        <li>The main firmware of the physical modules needed to be flashed.</li>
+                    </ul>
+                </li>
+                <li>Bluetooth Low-Energy (BLE) Flash
+                    <ul>
+                        <li>The BLE chip firmware also needed to be flashed.</li>
+                    </ul>
+                </li>
+                <li>Manifest Version Write
+                    <ul>
+                        <li>Lastly, <em>all</em> of our firmware was packaged together (NVM, CP, BLE, etc.) & version controlled with a <em>Manifest Version</em>. Writing this value was always the final step of the DFU process.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>DFU Process Diagram</h4>
+            <span class="generic_figure">
+                <figure>
+                    <img src="../Resources/Dfu_State_Machines.png" alt="DFU State Machines Diagram">
+                </figure>
+            </span>
+
+            <p>The DFU process which my coworker & I developed was ultimately ported across all medians. We started with a C# command-line tool—for simplicity & ease of testing—performing DFU's over CAN. I quickly translated the process into Python, adding some extra stages for loading both CP & BLE bootloaders. This allowed for use in our production process and it ultimately found itself in our Small Enclosure Production Test Fixture (SEPTF) (see the <a href="../HTML/professional_experience.html">Professional Experience</a> page). The DFU process naturally had to be implemented in the mobile world & work over Bluetooth, not just CAN. I first translated & implemented in Kotlin. Then after my extensive Android Espresso UI testing & validation of the process, helped port it over to iOS in Swift.</p>
+        </main>
+
+        <footer>
+            <a href="references.html">
+                <i class="fa-regular fa-copyright"></i>
+            </a>
+            <a href="mailto: jmooster4@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jeremy-oosterbaan-714177206/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JPEG1" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
