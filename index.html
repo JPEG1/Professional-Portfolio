@@ -1,3 +1,4 @@
+<!-- IMPORTANT: The main index.html page MUST be in the root directory for deployment (without requiring a bunch of extra infrastructure). -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeremy Oosterbaan's Professional Portfolio</title>
-    <link rel="stylesheet" href="../CSS/reset.css">
-    <link rel="stylesheet" href="../CSS/main.css">
-    <link rel="stylesheet" href="../CSS/hamburger-menu.css">
+    <link rel="stylesheet" href="./src/CSS/reset.css">
+    <link rel="stylesheet" href="./src/CSS/main.css">
+    <link rel="stylesheet" href="./src/CSS/hamburger-menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
             </div>
 
             <figure>
-                <img src="../Resources/headshot1.png" alt="Jeremy Oosterbaan">
+                <img src="./src/Resources/headshot1.png" alt="Jeremy Oosterbaan">
                 <figcaption>An, admittedly dated, portrait of myself.</figcaption>
             </figure>
         </header>
@@ -45,12 +46,12 @@
                 <span></span>
 
                 <ul id="menu">
-                    <li><a href="../HTML/index.html">Home</a></li>
-                    <li><a href="../HTML/professional_experience.html">Professional Experience</a></li>
-                    <li><a href="../HTML/design_and_development.html">Design & Development</a></li>
-                    <li><a href="../HTML/aspirations.html">Aspirations</a></li>
-                    <li><a href="../HTML/side_projects.html">Fun Side Projects</a></li>
-                    <li><a href="../HTML/about_me.html">About Me</a></li>
+                    <li><a href="./src/HTML/index.html">Home</a></li>
+                    <li><a href="./src/HTML/professional_experience.html">Professional Experience</a></li>
+                    <li><a href="./src/HTML/design_and_development.html">Design & Development</a></li>
+                    <li><a href="./src/HTML/aspirations.html">Aspirations</a></li>
+                    <li><a href="./src/HTML/side_projects.html">Fun Side Projects</a></li>
+                    <li><a href="./src/HTML/about_me.html">About Me</a></li>
                     <li><a href="https://www.linkedin.com/in/jeremy-oosterbaan-714177206/" target="_blank">LinkedIn</a></li>
                     <li><a href="https://github.com/JPEG1" target="_blank">GitHub</a></li>
                 </ul>
@@ -64,14 +65,14 @@
             
             <h2>Resume</h2>
             <span id="resume">
-                <embed src="../Resources/JeremyOosterbaan_Resume.pdf" type="application/pdf">
+                <embed src="./src/Resources/JeremyOosterbaan_Resume.pdf" type="application/pdf">
             </span>
             
             <p><strong>Disclaimer:</strong> <em>I am most certainly not a front-end developer. Thus, this portfolio is a simple, static website which I threw together within a weekend to present my work in other, non-front-end focused domains.</em></p>
         </main>
 
         <footer>
-            <a href="references.html">
+            <a href="/src/HTML/references.html">
                 <i class="fa-regular fa-copyright"></i>
             </a>
             <a href="mailto: jmooster4@gmail.com" target="_blank">
