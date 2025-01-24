@@ -110,16 +110,16 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     gap: 1em;
     background-color: slategray;
-    border-radius: 0.5em;
-    padding: 1em 0em;
+    border-radius: 0.25em;
+    padding: 0.25em 0.25em;
     align-items: flex-start;
     justify-content: center;
     margin: 1em auto;
 }
 
 #resume embed {
-    width: 600px;
-    height: 850px;
+    width: 950px;
+    height: 1150px;
     border-radius: 0.1em;
 }
 
