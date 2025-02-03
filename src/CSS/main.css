@@ -144,12 +144,24 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
-.apps figure img {
+.apps a {
     border: 0px solid white;
-    border-radius: 0em;
+    font-size: 1200%;
     text-decoration: none;
+    color: goldenrod;
 }
 
-.apps figure img:hover {
+.apps a:hover {
+    opacity: 0.5;
+}
+
+.apps abbr {
+    border: 0px solid white;
+    font-size: 1200%;
+    text-decoration: none;
+    color: goldenrod;
+}
+
+.apps abbr:hover {
     opacity: 0.5;
 }
