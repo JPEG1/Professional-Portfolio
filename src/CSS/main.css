@@ -32,7 +32,7 @@ header figure {
     text-align: center;
     margin-left: 3em;
     font-size: 75%;
-    color: goldenrod;
+    color: #daa520;
 }
 
 header img {
@@ -55,7 +55,7 @@ main {
 }
 
 footer {
-    background-color: slategray;
+    background-color: #708090;
     padding: 1em;
     display: flex;
     justify-content: space-around;
@@ -65,7 +65,7 @@ footer {
 footer a {
     font-size: 150%;
     text-decoration: none;
-    color: goldenrod;
+    color: #daa520;
 }
 
 footer a:hover {
@@ -164,5 +164,48 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .apps abbr:hover {
+    opacity: 0.5;
+}
+
+/** certifications.html **/
+.certs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 1em;
+    background-color: slategray;
+    border-radius: 0.5em;
+    padding: 0.5em 0em;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0.5em auto;
+}
+
+.certs figure {
+    width: 175px;
+    text-align: center;
+    font-size: 60%;
+    color: white;
+    text-decoration: none;
+}
+
+.certs a {
+    border: 0px solid white;
+    text-decoration: none;
+    color: goldenrod;
+}
+
+.certs a:hover {
+    opacity: 0.5;
+}
+
+.certs abbr {
+    border: 0px solid white;
+    font-size: 1200%;
+    text-decoration: none;
+    color: goldenrod;
+}
+
+.certs abbr:hover {
     opacity: 0.5;
 }
